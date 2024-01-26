@@ -7,3 +7,19 @@
   .container > * {
     grid-column: 2;
   }
+
+  .blogsContainer > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loaderContainer h1 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }

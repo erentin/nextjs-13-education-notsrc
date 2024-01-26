@@ -3,14 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './styles.module.css'
 
-function BlogCard() {
+function BlogCard( {id, title, body} ) {
+
   return (
-    <Link href="/" className={styles.card}>
+    <Link href={`/${id}`} className={styles.card}>
 
         <div className={styles.cardImage}>
 
             <Image 
-              src="https://picsum.photos/200/300" 
+              src={`https://picsum.photos/200/300/?random=${id}`}
               alt="Blog Card Image" 
               fill
             />
@@ -19,8 +20,8 @@ function BlogCard() {
 
         <div className={styles.cardBody}>
 
-            <h3>Title</h3>
-            <p>Lorem ipsum</p>
+            <h3>{title}</h3>
+            <p>{body}</p>
             
         </div>   
 
